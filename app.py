@@ -101,7 +101,6 @@
 
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -110,8 +109,8 @@ from htmlTemplates import css, bot_template, user_template
 from transformers import pipeline
 
 # Load environment variables
-load_dotenv()
-HF_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
+HF_TOKEN = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 # Load PDF text
 def get_pdf_text(pdf_docs):
