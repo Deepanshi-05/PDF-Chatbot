@@ -1,9 +1,12 @@
 streamlit==1.35.0
 python-dotenv==1.0.1
 PyPDF2==3.0.1
-transformers==4.41.2
-sentence-transformers==2.6.1
+transformers==4.31.0          # older version with prebuilt wheels
+sentence-transformers==2.2.2  # matches compatible tokenizers
 huggingface-hub==0.23.2
 langchain==0.1.14
 faiss-cpu==1.12.0
-
+rich==14.1.0
+markdown-it-py==4.0.0
+mdurl==0.1.2
+pygments==2.19.2
